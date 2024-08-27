@@ -50,14 +50,7 @@ export default function SearchInput({
             });
             setSearchData([], "");
             setShowDropdown(false);
-        } else {
-            navigate({
-                pathname: "/jobs/search/",
-                search: `?${createSearchParams({
-                    query: newValue,
-                })}`,
-            });
-        }
+        }  
     };
 
     const handleJobClick = (item: any) => {
