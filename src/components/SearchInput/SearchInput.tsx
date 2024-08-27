@@ -19,11 +19,14 @@ export default function SearchInput({
         skip: debouncedTitle.length < 3,
     });
     useEffect(() => {
+        if (title === queryValue) {
+            setShowDropdown(false);
+        } else {
+            setShowDropdown(true);
+        }
         const handler = setTimeout(() => {
             setDebouncedTitle(title);
-            setShowDropdown(true);
         }, 500);
-
         return () => {
             clearTimeout(handler);
         };
