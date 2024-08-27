@@ -97,6 +97,9 @@
                 font-weight: 400;
                 border-radius: 5px;
                 border: 1px solid #000000;
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
             }
             .search-icon {
                 position: absolute;
@@ -191,11 +194,20 @@
     .main-container {
         .title-all-jobs {
             margin-bottom: 57px;
+            @media (max-width: 768px) {
+                margin-bottom: 15px;
+
+            }
             h2 {
                 font-size: 48px;
                 font-weight: 700;
                 line-height: 65.25px;
                 color: $primaryColor;
+                @media (max-width: 768px) {
+                    font-size: 34px;
+                    line-height: 40.25px;
+
+                }
             }
         }
         .row {
@@ -249,6 +261,10 @@
     .job-title,
     .skill-title {
         margin-bottom: 54px;
+        @media (max-width: 768px) {
+            margin-bottom: 15px;
+
+        }
         h2 {
             font-size: 48px;
             font-weight: 700;
