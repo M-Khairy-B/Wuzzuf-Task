@@ -12,3 +12,17 @@ This is a job search application built with React. It features a dynamic search 
 - **Search Jobs Screen**: Shows search results and handles query strings for search.
 - **Job Details Screen**: Provides detailed information about a specific job.
 - **Skill Details Screen**: Displays information about skills related to a job.
+
+## Project Setup
+
+### Prerequisites
+
+- Node.js and npm installed on your local machine.
+
+### Installation
+- npm install
+- npm run dev
+
+
+This README provides a comprehensive overview of your project, setup instructions. Adjust the content based on any additional features or changes in your project.
+
