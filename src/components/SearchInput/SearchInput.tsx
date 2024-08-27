@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSearchJobQuery } from "./SearchApi";
-import { createSearchParams, useNavigate } from "react-router-dom";
+import { createSearchParams, useLocation, useNavigate } from "react-router-dom";
 import { Job } from "../../Model/types";
 
 interface SearchInputProps {
@@ -12,6 +12,7 @@ export default function SearchInput({
     queryValue,
 }: SearchInputProps) {
     const navigate = useNavigate();
+    const location = useLocation();
     const [title, setTitle] = useState("");
     const [showDropdown, setShowDropdown] = useState<boolean>(false);
     const [debouncedTitle, setDebouncedTitle] = useState(title);
@@ -45,15 +46,18 @@ export default function SearchInput({
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = e.target.value.toLowerCase();
         setTitle(newValue);
-
+        
         if (newValue === "") {
-            navigate({
+            if (location.pathname === "/") {
+                return;
+            }
+                navigate({
                 pathname: "/jobs/search/",
                 search: "",
             });
             setSearchData([], "");
             setShowDropdown(false);
-        }  
+        }
     };
 
     const handleJobClick = (item: any) => {
