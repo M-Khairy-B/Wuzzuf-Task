@@ -18,7 +18,6 @@ export default function AllJobsSearch({
     const [loading, setLoading] = useState<boolean>(false);
     useEffect(() => {
         const storedData = localStorage.getItem("searchHistory");
-
         if (storedData) {
             const parsedData = JSON.parse(storedData);
             setDataHistory(parsedData);
