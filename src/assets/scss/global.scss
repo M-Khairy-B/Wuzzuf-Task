@@ -261,13 +261,14 @@
 .job-details,
 .skill-details {
     padding: 44px;
-
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
     .job-title,
     .skill-title {
         margin-bottom: 54px;
         @media (max-width: 768px) {
             margin-bottom: 15px;
-
         }
         h2 {
             font-size: 48px;
