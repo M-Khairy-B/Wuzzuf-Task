@@ -1,0 +1,43 @@
+@import 'variables';
+html {
+    font-family: $primaryFont;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $bg-primary;
+    color: $primaryColor;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+input:focus-visible {
+    box-shadow: none;
+    outline: none;
+}
