@@ -111,7 +111,7 @@
     .dropdown-list {
         position: absolute;
         top: 77%;
-        width: 52%;
+        min-width: 776px;
         background: white;
         max-height: 200px;
         overflow-y: auto;
@@ -125,7 +125,7 @@
             }
         }
         @media (max-width: 768px) {
-            width: 80%;
+            min-width: 620px;
         }
     }
 }
@@ -228,12 +228,11 @@
         }
         @media (max-width: 1200px) {
             grid-template-columns: 1fr !important;
-                 .col-main-job {
-                    grid-template-columns: 1fr;
-                }
+            .col-main-job {
+                grid-template-columns: 1fr;
+            }
         }
     }
-    
 }
 .job-details,
 .skill-details {
@@ -354,7 +353,7 @@
             list-style: disc;
             list-style-position: inside;
             text-decoration: underline;
-            
+
             li {
                 font-size: 18px;
                 font-weight: 400;
