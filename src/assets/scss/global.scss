@@ -191,6 +191,10 @@
 .all-jobs,
 .all-jobs-search {
     padding: 32px 50px;
+    @media (max-width: 768px) {
+        padding: 32px 20px;
+    }
+
     .main-container {
         .title-all-jobs {
             margin-bottom: 57px;
