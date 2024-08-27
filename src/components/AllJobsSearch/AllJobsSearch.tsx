@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Job } from "../../Model/types";
 import { useGetJobsListQuery } from "../AllJobs/jobsApiSlice";
 import Card from "../Card/Card";
-import SidebarHistory from "../sidebarHistory/sidebarHistory";
+import SidebarHistory from "../sidebarHistory/SidebarHistory";
 import { ClipLoader } from "react-spinners";
 interface AllJobsSearchProps {
     searchData: Job[];

@@ -15,7 +15,7 @@ export default function SearchInput({
     const [title, setTitle] = useState("");
     const [showDropdown, setShowDropdown] = useState<boolean>(false);
     const [debouncedTitle, setDebouncedTitle] = useState(title);
-    const { data: searchData, isLoading } = useSearchJobQuery(debouncedTitle, {
+    const { data: searchData } = useSearchJobQuery(debouncedTitle, {
         skip: debouncedTitle.length < 3,
     });
     useEffect(() => {

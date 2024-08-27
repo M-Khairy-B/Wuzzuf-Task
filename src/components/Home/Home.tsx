@@ -5,7 +5,7 @@ import { Job } from "../../Model/types";
 import { Helmet } from "react-helmet";
 
 export default function Home() {
-    const [searchData, setSearchData] = useState<Job[]>([]);
+    const [, setSearchData] = useState<Job[]>([]);
 
     return (
         <>

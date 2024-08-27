@@ -1,5 +1,5 @@
 import { isRejectedWithValue } from '@reduxjs/toolkit';
-import type { MiddlewareAPI, Middleware } from '@reduxjs/toolkit';
+import type {  Middleware } from '@reduxjs/toolkit';
 import toast from 'react-hot-toast';
 
 interface ErrorData {
@@ -13,7 +13,7 @@ interface PayloadData {
 }
 
 export const rtkQueryErrorLogger: Middleware =
-  (api: MiddlewareAPI) => (next) => (action) => {
+  () => (next) => (action) => {
     if (isRejectedWithValue(action)) {
       console.warn('RTK Query encountered an error:', action.error);
       
